@@ -1,0 +1,31 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode  
+  pool: 10
+
+development:
+  # Add default attributes to config
+  <<: *default
+  database: clist-dev
+  username: dbuser
+  password: edea
+  host: localhost
+  port: 5432
+  
+test:
+  # Add default attributes to config
+  <<: *default
+  database: clist-test
+  username: dbuser  
+  password: edea
+  host: localhost
+  port: 5432
+
+production:
+  # Add default attributes to config
+  <<: *default
+  database: clist-prod
+  username: dbuser  
+  password: edea
+  host: localhost
+  port: 5432
